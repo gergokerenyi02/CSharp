@@ -1,0 +1,11 @@
+C:\Projektek\CSharp\dotNET Projects\Winforms\Vadászat\Vadaszat\bin\Debug\net6.0\Vadaszat.deps.json
+C:\Projektek\CSharp\dotNET Projects\Winforms\Vadászat\Vadaszat\bin\Debug\net6.0\Vadaszat.dll
+C:\Projektek\CSharp\dotNET Projects\Winforms\Vadászat\Vadaszat\bin\Debug\net6.0\Vadaszat.pdb
+C:\Projektek\CSharp\dotNET Projects\Winforms\Vadászat\Vadaszat\obj\Debug\net6.0\Vadaszat.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projektek\CSharp\dotNET Projects\Winforms\Vadászat\Vadaszat\obj\Debug\net6.0\Vadaszat.AssemblyInfoInputs.cache
+C:\Projektek\CSharp\dotNET Projects\Winforms\Vadászat\Vadaszat\obj\Debug\net6.0\Vadaszat.AssemblyInfo.cs
+C:\Projektek\CSharp\dotNET Projects\Winforms\Vadászat\Vadaszat\obj\Debug\net6.0\Vadaszat.csproj.CoreCompileInputs.cache
+C:\Projektek\CSharp\dotNET Projects\Winforms\Vadászat\Vadaszat\obj\Debug\net6.0\Vadaszat.dll
+C:\Projektek\CSharp\dotNET Projects\Winforms\Vadászat\Vadaszat\obj\Debug\net6.0\refint\Vadaszat.dll
+C:\Projektek\CSharp\dotNET Projects\Winforms\Vadászat\Vadaszat\obj\Debug\net6.0\Vadaszat.pdb
+C:\Projektek\CSharp\dotNET Projects\Winforms\Vadászat\Vadaszat\obj\Debug\net6.0\ref\Vadaszat.dll
