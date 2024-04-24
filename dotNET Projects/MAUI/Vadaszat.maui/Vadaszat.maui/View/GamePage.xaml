@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Vadaszat.maui.View.GamePage"
+             Title="Vadaszat">
+
+    <Grid Margin="4" RowSpacing="8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- a gombokat a képernyő tetejére helyezzük -->
+
+       
+        <Button Text="Beállítások" Command="{Binding ExitCommand}" Grid.Row="0" HorizontalOptions="End" />
+
+        <Button Text="3x3" Command="{Binding ChangeMapSize}" CommandParameter="3" Grid.Row="0" HorizontalOptions="Center" />
+        <Button Text="5x5" Command="{Binding ChangeMapSize}" CommandParameter="5" Grid.Row="0" HorizontalOptions="End" />
+        <Button Text="7x7" Command="{Binding ChangeMapSize}" CommandParameter="7" Grid.Row="0" HorizontalOptions="Start" />
+
+        <Grid
+        Grid.Row="1"
+        BindableLayout.ItemsSource="{Binding Fields}"
+        RowDefinitions="{Binding GameTableRows}"
+        ColumnDefinitions="{Binding GameTableColumns}"
+        ColumnSpacing="3"
+        RowSpacing="3">
+            <!-- a játéktáblát egy sorfolytos listával valósítjuk meg -->
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <!-- a rács elemei gombok lesznek -->
+                    <Button
+                    Grid.Row="{Binding X}"
+                    Grid.Column="{Binding Y}"
+                    CommandParameter="{Binding XY}"
+                    Padding="0"
+                    BackgroundColor="{Binding BackgroundColor}"
+                    FontAttributes="Bold"
+                    FontSize="Medium" />
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </Grid>
+
+        <!-- az információkat alul írjuk ki -->
+        <HorizontalStackLayout HorizontalOptions="Start" Grid.Row="2">
+            <Label Text="Lépésszám: " />
+            <Label Text="{Binding StepCounter}" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="End" Grid.Row="2">
+            <Label Text="Jelenlegi játékos: " />
+            <Label Text="{Binding CurrentPlayer}" />
+        </HorizontalStackLayout>
+        <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="10">
+            <Button Text="L" Command="{Binding MoveCommand}" CommandParameter="left" />
+            <Button Text="U" Command="{Binding MoveCommand}" CommandParameter="up" />
+            <Button Text="R" Command="{Binding MoveCommand}" CommandParameter="right" />
+            <Button Text="D" Command="{Binding MoveCommand}" CommandParameter="down" />
+
+            <Button Text="Switch Player" Command="{Binding SwitchSelectedCharacterCommand}" Margin="40,0,0,0" />
+        </StackLayout>
+    </Grid>
+
+</ContentPage>

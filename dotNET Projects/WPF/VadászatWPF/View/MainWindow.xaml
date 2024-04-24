@@ -1,0 +1,90 @@
+﻿<Window x:Class="VadászatWPF.MainWindow"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            
+            Title="Vadaszat" Height="1000" Width="1000">
+    <Window.InputBindings>
+        <!-- billentyűparancsok megfelelő paraméterrel -->
+        <KeyBinding Key="Right" Command="{Binding MoveCommand}" CommandParameter="right" />
+        <KeyBinding Key="Left" Command="{Binding MoveCommand}" CommandParameter="left" />
+        <KeyBinding Key="Up" Command="{Binding MoveCommand}" CommandParameter="up" />
+        <KeyBinding Key="Down" Command="{Binding MoveCommand}" CommandParameter="down" />
+        <KeyBinding Key="Tab" Command="{Binding SwitchSelectedCharacterCommand}" />
+
+    </Window.InputBindings>
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="Fájl">
+                <MenuItem Header="Mentés" Command="{Binding SaveGameCommand}"></MenuItem>
+                <Separator />
+                <MenuItem Header="Betöltés" Command="{Binding LoadGameCommand}"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Pályaméret">
+                <MenuItem Header="3x3" Command="{Binding ChangeMapSize}" CommandParameter="3"></MenuItem>
+                <MenuItem Header="5x5" Command="{Binding ChangeMapSize}" CommandParameter="5"></MenuItem>
+                <MenuItem Header="7x7" Command="{Binding ChangeMapSize}" CommandParameter="7"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <ItemsControl Grid.Row="1" ItemsSource="{Binding Fields}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Rows="{Binding MapSize}" Columns="{Binding MapSize}" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <!--az elemek gombok lesznek-->
+                <DataTemplate>
+                    <Button>
+                        <!-- gomb háttérszíne -->
+                        <Button.Style>
+                            <!-- gomb stílusa, ahol a színét megadjuk -->
+                            <Style TargetType="Button">
+                                <Style.Triggers>
+                                    <!-- a szín egy adatkötés hatására fog változni-->
+                                    <DataTrigger Binding="{Binding Character}" Value="0">
+                                        <Setter Property="Background" Value="WhiteSmoke" />
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Character}" Value="1">
+                                        <Setter Property="Background" Value="Red" />
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Character}" Value="2">
+                                        <Setter Property="Background" Value="Blue" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+        <StatusBar Grid.Row="2">
+            <!-- státuszsor a lépésszámhoz és az időhöz -->
+            <StatusBarItem>
+                <TextBlock Text="Lépésszám: " />
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock Text="{Binding StepCounter}" />
+            </StatusBarItem>
+            <Separator />
+            <StatusBarItem>
+                <TextBlock Text="Adott játékos: " />
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock Text="{Binding CurrentPlayer}" />
+            </StatusBarItem>
+            <Separator />
+            <StatusBarItem />
+        </StatusBar>
+        
+    </Grid>
+</Window>
