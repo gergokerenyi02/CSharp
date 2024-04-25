@@ -1,0 +1,10 @@
+Natural	The Hidden World	Jane Smith	XYZ Publishing	12345	300	sok
+Fiction	The Lost Kingdom	John Johnson	ABC Publishers	09876	400	sok
+Youth	The Adventure Begins	Sarah Adams	DEF Books	56789	250	sok
+Natural	Into the Wild	David Thompson	GHI Publications	43210	350	sok
+Fiction	The Enchanted Forest	Emily Roberts	JKL Publishing	67890	280	ritka
+Youth	The Secret Island	Michael Anderson	MNO Books	32109	200	ritka
+Natural	A Journey Through Nature	Samantha White	PQR Publishers	98765	320	sok
+Fiction	The Mysterious Puzzle	William Brown	STU Publications	54321	380	sok
+Youth	The Magical Quest	Olivia Green	VWX Books	21098	220	sok
+Natural	Exploring Wildlife	Robert Wilson	YZA Publishing	45678	290	ritka
