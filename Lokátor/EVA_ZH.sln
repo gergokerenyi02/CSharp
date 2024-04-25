@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVA_ZH_WPF", "EVA_ZH_WPF\EVA_ZH_WPF.csproj", "{E13E5209-4811-4D7D-BD56-D06934584AC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVA_ZH_Console", "EVA_ZH_Console\EVA_ZH_Console.csproj", "{912B33A2-4F06-4162-8F9B-12E80A75B96E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E13E5209-4811-4D7D-BD56-D06934584AC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E13E5209-4811-4D7D-BD56-D06934584AC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E13E5209-4811-4D7D-BD56-D06934584AC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E13E5209-4811-4D7D-BD56-D06934584AC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{912B33A2-4F06-4162-8F9B-12E80A75B96E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{912B33A2-4F06-4162-8F9B-12E80A75B96E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{912B33A2-4F06-4162-8F9B-12E80A75B96E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{912B33A2-4F06-4162-8F9B-12E80A75B96E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C48EFB3-D119-4D3D-8EB4-62FA6111CE8C}
+	EndGlobalSection
+EndGlobal
