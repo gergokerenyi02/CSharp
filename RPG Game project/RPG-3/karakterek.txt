@@ -1,0 +1,4 @@
+﻿Boromir harcos 100 10 20
+Gimli harcos 120 20 15
+Talion kósza 80 20 20
+Gandalf varázsló 40 5 20
